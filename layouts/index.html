@@ -47,7 +47,7 @@
   </div>
 </section>
 
-{{ $papers := hugo.Data.papers }}
+{{ $papers := .Site.Data.papers }}
 {{ if gt (len $papers) 0 }}
 <section class="content-section" id="research" aria-labelledby="research-heading">
   <div class="section-inner narrow">
@@ -122,7 +122,7 @@
 </section>
 {{ end }}
 
-{{ $teaching := hugo.Data.teaching }}
+{{ $teaching := .Site.Data.teaching }}
 {{ if gt (len $teaching) 0 }}
 <section class="content-section" id="teaching" aria-labelledby="teaching-heading">
   <div class="section-inner narrow">
