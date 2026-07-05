@@ -1,0 +1,11 @@
+{{ define "main" }}
+<article class="content-section page-single">
+  <div class="section-inner narrow">
+    <p class="meta">{{ .Date.Format "January 2, 2006" }}</p>
+    <h1>{{ .Title }}</h1>
+    <div class="prose">
+      {{ .Content }}
+    </div>
+  </div>
+</article>
+{{ end }}

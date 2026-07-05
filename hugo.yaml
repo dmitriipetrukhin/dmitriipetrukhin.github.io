@@ -1,0 +1,46 @@
+baseURL: "https://dimarexlondon.github.io/dmitriipetrukhin-site/"
+title: "Dmitrii Petrukhin"
+locale: en-us
+disableKinds:
+  - taxonomy
+  - term
+
+params:
+  locale: "en-us"
+  description: "PhD Candidate, Department of Economics, University of Cambridge"
+  author: "Dmitrii Petrukhin"
+  email: "dp657@cam.ac.uk"
+  role: "PhD Candidate"
+  program_year: "Third-year PhD candidate"
+  department: "Department of Economics"
+  institution: "University of Cambridge"
+  affiliation: "Department of Economics, University of Cambridge"
+  advisor: "Prof Sriya Iyer, FREcon"
+  photo: "images/photo.jpg"
+  tagline: "I study the political economy of conflict, religion, and populism."
+  mysite:
+    credit: true
+    discovery: true
+
+menu:
+  main:
+    - name: Research
+      url: "/#research"
+      weight: 10
+    - name: Teaching
+      url: "/#teaching"
+      weight: 20
+    - name: Awards
+      url: "/#awards"
+      weight: 30
+    - name: Contact
+      url: "/#contact"
+      weight: 40
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+permalinks:
+  blog: "/blog/:slug/"

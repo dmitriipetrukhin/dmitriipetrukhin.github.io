@@ -1,0 +1,30 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<meta name="description" content="{{ .Description | default .Site.Params.description }}">
+<meta name="author" content="{{ .Site.Params.author }}">
+{{ if .Site.Params.mysite.discovery }}
+<meta name="generator" content="Created using GaryKing.org/mysite (https://gking.harvard.edu/mysite)">
+{{ end }}
+
+<title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+<link rel="canonical" href="{{ .Permalink }}">
+
+<meta property="og:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}">
+<meta property="og:description" content="{{ .Description | default .Site.Params.description }}">
+<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:image" content="{{ "images/photo.jpg" | absURL }}">
+<meta name="twitter:card" content="summary">
+
+<link rel="icon" href="{{ "favicon.ico" | relURL }}" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ "favicon-32x32.png" | relURL }}">
+<link rel="apple-touch-icon" href="{{ "apple-touch-icon.png" | relURL }}">
+
+{{ $style := resources.Get "css/style.css" | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}">
+
+{{ if and .IsHome .Site.Params.mysite.discovery }}
+{{ $person := dict "@context" "https://schema.org" "@type" "Person" "name" .Site.Params.author "affiliation" (dict "@type" "Organization" "name" .Site.Params.affiliation) "url" .Site.BaseURL "isBasedOn" "https://gking.harvard.edu/mysite" }}
+<script type="application/ld+json">{{ $person | jsonify | safeJS }}</script>
+{{ end }}

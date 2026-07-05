@@ -1,0 +1,85 @@
+- title: "The Economic Costs of Religious Riots in India"
+  coauthors:
+    - "Sriya Iyer"
+    - "Anand Shrivastava"
+  status: "working paper"
+  status_detail: "CEPR Discussion Paper DP21638; Cambridge Working Paper in Economics 2644"
+  pdf: "files/economic-costs-religious-riots-india.pdf"
+  links:
+    - name: "CEPR"
+      url: "https://cepr.org/publications/dp21638"
+    - name: "Cambridge"
+      url: "https://www.econ.cam.ac.uk/sites/default/files/publication-cwpe-pdfs/cwpe2644.pdf"
+  description: "Estimates the local economic costs of communal riots in India, using district-level data to study effects on nightlights, firms, credit, infrastructure, and institutional trust."
+  tags:
+    - "conflict"
+    - "religion"
+    - "development"
+  job_market_paper: false
+
+- title: "Do Not Drain The Swamp! Populism, Bureaucracy and Economic Performance"
+  coauthors:
+    - "Massimo Morelli"
+    - "Matia Vannoni"
+  status: "working paper"
+  status_detail: "CEPR Discussion Paper DP21671; IGIER Working Paper 730"
+  link: "https://cepr.org/publications/dp21671"
+  links:
+    - name: "CEPR"
+      url: "https://cepr.org/publications/dp21671"
+    - name: "IGIER"
+      url: "https://igier.unibocconi.eu/research/working-papers/do-not-drain-swamp-populism-bureaucracy-and-economic-performance"
+    - name: "SSRN"
+      url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6981959"
+  description: "Studies whether strong bureaucratic institutions buffer the economic costs of populist governance, combining cross-country evidence with a U.S. state-level panel."
+  tags:
+    - "populism"
+    - "bureaucracy"
+    - "political economy"
+  job_market_paper: false
+
+- title: "A Machine Learning Investigation of Spanish Law and its Relation to the Economy"
+  coauthors:
+    - "Guillem Gordo-i-Bach"
+  status: "working paper"
+  status_detail: "SSRN working paper"
+  link: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6069507"
+  links:
+    - name: "SSRN"
+      url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6069507"
+  description: "Uses machine learning and text-as-data methods to measure the ideological content of Spanish regional laws and examine its relationship with regional economic performance."
+  tags:
+    - "text analysis"
+    - "machine learning"
+    - "political economy"
+  job_market_paper: false
+
+- title: "China–India Revisited"
+  coauthors:
+    - "Sriya Iyer"
+    - "Wei Xiong"
+    - "Xu Yang"
+  status: "work in progress"
+  tags:
+    - "political economy"
+    - "development"
+  job_market_paper: false
+
+- title: "The Voice of Politics"
+  coauthors:
+    - "Guillem Gordo-i-Bach"
+  status: "work in progress"
+  tags:
+    - "text analysis"
+    - "political economy"
+  job_market_paper: false
+
+- title: "Commitment as Populist Strategy: An Empirical Inquiry"
+  coauthors:
+    - "Massimo Morelli"
+    - "Matia Vannoni"
+  status: "work in progress"
+  tags:
+    - "populism"
+    - "political economy"
+  job_market_paper: false

@@ -1,0 +1,8 @@
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p>&copy; {{ now.Format "2006" }} {{ .Site.Params.author }}</p>
+    {{ if .Site.Params.mysite.credit }}
+    <p class="mysite-credit">Created using <a href="https://garyking.org/mysite" rel="noopener" target="_blank">GaryKing.org/mysite</a></p>
+    {{ end }}
+  </div>
+</footer>

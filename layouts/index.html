@@ -1,0 +1,174 @@
+{{ define "main" }}
+<section class="hero" id="about" aria-labelledby="hero-title">
+  <div class="section-inner hero-inner">
+    <div class="hero-photo-wrap">
+      <img class="hero-photo" src="{{ .Site.Params.photo | relURL }}" alt="Portrait of {{ .Site.Params.author }}" width="240" height="240" fetchpriority="high">
+    </div>
+    <div class="hero-copy">
+      <p class="eyebrow">{{ .Site.Params.program_year }}</p>
+      <h1 id="hero-title">{{ .Site.Params.author }}</h1>
+      <p class="title-line">{{ .Site.Params.role }}, {{ .Site.Params.department }}</p>
+      <p class="institution-line">{{ .Site.Params.institution }}</p>
+      <p class="tagline">{{ .Site.Params.tagline }}</p>
+      <div class="hero-actions" aria-label="Contact and research links">
+        <a class="button primary" href="mailto:{{ .Site.Params.email }}">Email</a>
+        <a class="button secondary" href="#research">Research</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="content-section" aria-labelledby="bio-heading">
+  <div class="section-inner narrow">
+    <h2 id="bio-heading">Bio</h2>
+    <div class="prose">
+      {{ .Content }}
+    </div>
+    <div class="detail-grid">
+      <div>
+        <h3>Research Interests</h3>
+        <ul class="tag-list">
+          {{ range .Params.research_interests }}
+          <li>{{ . }}</li>
+          {{ end }}
+        </ul>
+      </div>
+      <div>
+        <h3>Advisor</h3>
+        <p>{{ .Site.Params.advisor }}</p>
+        {{ with .Params.affiliations }}
+        <h3>Affiliation</h3>
+        <p>
+          {{ range $index, $affiliation := . }}{{ if $index }}, {{ end }}<a href="{{ $affiliation.url }}" target="_blank" rel="noopener">{{ $affiliation.name }}</a>{{ end }}
+        </p>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>
+
+{{ $papers := hugo.Data.papers }}
+{{ if gt (len $papers) 0 }}
+<section class="content-section" id="research" aria-labelledby="research-heading">
+  <div class="section-inner narrow">
+    <h2 id="research-heading">Research</h2>
+    {{ $jobMarket := where $papers "job_market_paper" true }}
+    {{ if gt (len $jobMarket) 0 }}
+    <div class="paper-feature-list">
+      {{ range $jobMarket }}
+      {{ partial "paper.html" (dict "paper" . "featured" true) }}
+      {{ end }}
+    </div>
+    {{ end }}
+
+    {{ $working := where $papers "status" "working paper" }}
+    {{ if gt (len $working) 0 }}
+    <div class="paper-group">
+      <h3>Working Papers</h3>
+      <div class="paper-list">
+        {{ range $working }}
+        {{ partial "paper.html" (dict "paper" . "featured" false) }}
+        {{ end }}
+      </div>
+    </div>
+    {{ end }}
+
+    {{ $workInProgress := where $papers "status" "work in progress" }}
+    {{ if gt (len $workInProgress) 0 }}
+    <div class="paper-group">
+      <h3>Work in Progress</h3>
+      <div class="paper-list">
+        {{ range $workInProgress }}
+        {{ partial "paper.html" (dict "paper" . "featured" false) }}
+        {{ end }}
+      </div>
+      {{ with .Params.work_in_progress_note }}
+      <p class="work-note">{{ . }}</p>
+      {{ end }}
+    </div>
+    {{ end }}
+
+    {{ $published := where $papers "status" "published" }}
+    {{ if gt (len $published) 0 }}
+    <div class="paper-group">
+      <h3>Publications</h3>
+      <div class="paper-list">
+        {{ range $published }}
+        {{ partial "paper.html" (dict "paper" . "featured" false) }}
+        {{ end }}
+      </div>
+    </div>
+    {{ end }}
+  </div>
+</section>
+{{ end }}
+
+{{ with .Params.education }}
+<section class="content-section" id="education" aria-labelledby="education-heading">
+  <div class="section-inner narrow">
+    <h2 id="education-heading">Education</h2>
+    <div class="timeline-list">
+      {{ range . }}
+      <article class="timeline-item">
+        <div>
+          <h3>{{ .degree }}</h3>
+          <p>{{ .institution }}</p>
+        </div>
+        <p class="meta">{{ .years }}</p>
+      </article>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+
+{{ $teaching := hugo.Data.teaching }}
+{{ if gt (len $teaching) 0 }}
+<section class="content-section" id="teaching" aria-labelledby="teaching-heading">
+  <div class="section-inner narrow">
+    <h2 id="teaching-heading">Teaching</h2>
+    <div class="timeline-list">
+      {{ range $teaching }}
+      <article class="timeline-item teaching-item">
+        <div>
+          <h3>{{ .course }}</h3>
+          <p>{{ .role }}, {{ .institution }}</p>
+          <p class="meta">{{ .level }}{{ with .instructor }}. Course instructor: {{ . }}{{ end }}{{ with .colleges }}. {{ . }}{{ end }}</p>
+        </div>
+        <p class="meta">{{ .term }}</p>
+      </article>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+
+{{ with .Params.awards }}
+<section class="content-section" id="awards" aria-labelledby="awards-heading">
+  <div class="section-inner narrow">
+    <h2 id="awards-heading">Awards &amp; Fellowships</h2>
+    <div class="timeline-list">
+      {{ range . }}
+      <article class="timeline-item">
+        <div>
+          <h3>{{ .name }}</h3>
+          <p>{{ .institution }}</p>
+        </div>
+        <p class="meta">{{ .years }}</p>
+      </article>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+
+<section class="contact-section" id="contact" aria-labelledby="contact-heading">
+  <div class="section-inner contact-inner">
+    <div>
+      <h2 id="contact-heading">Contact</h2>
+      <p>{{ .Site.Params.department }}<br>{{ .Site.Params.institution }}</p>
+    </div>
+    <a class="contact-link" href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a>
+  </div>
+</section>
+{{ end }}

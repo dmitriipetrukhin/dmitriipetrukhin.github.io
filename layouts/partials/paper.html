@@ -1,0 +1,34 @@
+{{ $paper := .paper }}
+{{ $featured := .featured }}
+{{ $href := or $paper.pdf $paper.link }}
+<article class="{{ if $featured }}paper-item paper-featured{{ else }}paper-item{{ end }}">
+  <div class="paper-heading">
+    <h4>
+      {{ with $href }}
+      {{ $isExternal := or (hasPrefix . "https://") (hasPrefix . "http://") }}
+      <a href="{{ if $isExternal }}{{ . }}{{ else }}{{ . | relURL }}{{ end }}"{{ if $isExternal }} target="_blank" rel="noopener"{{ end }}>{{ $paper.title }}</a>
+      {{ else }}
+      {{ $paper.title }}
+      {{ end }}
+    </h4>
+    {{ with $paper.status }}
+    <span class="status-badge">{{ . }}</span>
+    {{ end }}
+  </div>
+  {{ with $paper.coauthors }}
+  <p class="paper-authors">With {{ delimit . ", " }}</p>
+  {{ end }}
+  {{ with $paper.status_detail }}
+  <p class="meta">{{ . }}</p>
+  {{ end }}
+  {{ with $paper.description }}
+  <p>{{ . }}</p>
+  {{ end }}
+  {{ with $paper.links }}
+  <div class="paper-links" aria-label="Paper links">
+    {{ range . }}
+    <a href="{{ .url }}" target="_blank" rel="noopener">{{ .name }}</a>
+    {{ end }}
+  </div>
+  {{ end }}
+</article>
