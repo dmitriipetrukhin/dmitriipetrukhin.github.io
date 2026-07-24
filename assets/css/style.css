@@ -439,6 +439,21 @@ h4 {
   font-weight: 650;
 }
 
+.paper-mentions {
+  margin: 0.55rem 0 0;
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+
+.paper-mentions span,
+.paper-mentions a {
+  font-weight: 650;
+}
+
+.paper-mentions span {
+  color: var(--color-text);
+}
+
 .timeline-list {
   border-top: 1px solid var(--color-border);
 }

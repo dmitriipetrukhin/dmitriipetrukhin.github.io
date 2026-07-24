@@ -31,6 +31,9 @@
       url: "https://igier.unibocconi.eu/research/working-papers/do-not-drain-swamp-populism-bureaucracy-and-economic-performance"
     - name: "SSRN"
       url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6981959"
+  mentioned_in:
+    - name: "VoxEU"
+      url: "https://cepr.org/voxeu/columns/dont-drain-swamp-populism-bureaucracy-and-economic-performance"
   description: "Studies whether strong bureaucratic institutions buffer the economic costs of populist governance, combining cross-country evidence with a U.S. state-level panel."
   tags:
     - "populism"

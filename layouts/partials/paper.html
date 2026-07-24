@@ -31,4 +31,10 @@
     {{ end }}
   </div>
   {{ end }}
+  {{ with $paper.mentioned_in }}
+  <p class="paper-mentions">
+    <span>Mentioned in:</span>
+    {{ range $index, $mention := . }}{{ if $index }}, {{ end }}<a href="{{ .url }}" target="_blank" rel="noopener">{{ .name }}</a>{{ end }}
+  </p>
+  {{ end }}
 </article>
