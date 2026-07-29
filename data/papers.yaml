@@ -41,16 +41,15 @@
     - "political economy"
   job_market_paper: false
 
-- title: "A Machine Learning Investigation of Spanish Law and its Relation to the Economy"
+- title: "Populist Laws and Economic Performance: Evidence from Spanish Regions"
   coauthors:
     - "Guillem Gordo-i-Bach"
   status: "work in progress"
-  status_detail: "Under substantial revision"
-  link: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6069507"
+  status_detail: "Currently under substantial revision"
   links:
-    - name: "SSRN"
+    - name: "Earlier SSRN draft"
       url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6069507"
-  description: "Uses machine learning and text-as-data methods to measure the ideological content of Spanish regional laws and examine its relationship with regional economic performance."
+  description: "Uses text-as-data and machine learning methods to study populist content in Spanish regional legislation and its relationship with regional economic performance. The project is currently being substantially revised from the earlier SSRN draft, A Machine Learning Investigation of Spanish Law and its Relation to the Economy."
   tags:
     - "text analysis"
     - "machine learning"
