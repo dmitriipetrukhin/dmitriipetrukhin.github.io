@@ -34,6 +34,8 @@
   mentioned_in:
     - name: "VoxEU"
       url: "https://cepr.org/voxeu/columns/dont-drain-swamp-populism-bureaucracy-and-economic-performance"
+    - name: "The Economy Review"
+      url: "https://economy.ac/review/2026/07/202607289659"
   description: "Studies whether strong bureaucratic institutions buffer the economic costs of populist governance, combining cross-country evidence with a U.S. state-level panel."
   tags:
     - "populism"
