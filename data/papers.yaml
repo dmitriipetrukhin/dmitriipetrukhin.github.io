@@ -36,6 +36,8 @@
       url: "https://cepr.org/voxeu/columns/dont-drain-swamp-populism-bureaucracy-and-economic-performance"
     - name: "The Economy Review"
       url: "https://economy.ac/review/2026/07/202607289659"
+    - name: "Baffi Centre"
+      url: "https://baffi.unibocconi.eu/morelli-investigates-impact-burocracy-costs-populism"
   description: "Studies whether strong bureaucratic institutions buffer the economic costs of populist governance, combining cross-country evidence with a U.S. state-level panel."
   tags:
     - "populism"
@@ -48,7 +50,6 @@
     - "Guillem Gordo-i-Bach"
   status: "work in progress"
   status_detail: "Currently under substantial revision"
-  description: "Uses text-as-data and machine learning methods to study populist content in Spanish regional legislation and its relationship with regional economic performance."
   tags:
     - "text analysis"
     - "machine learning"
