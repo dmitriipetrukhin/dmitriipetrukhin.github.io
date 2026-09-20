@@ -16,7 +16,7 @@
     {{ end }}
   </div>
   {{ with $paper.coauthors }}
-  <p class="paper-authors">With {{ delimit . ", " }}</p>
+  <p class="paper-authors">With {{ range $index, $coauthor := . }}{{ if $index }}, {{ end }}{{ with index site.Data.coauthors $coauthor }}<a href="{{ . }}" target="_blank" rel="noopener">{{ $coauthor }}</a>{{ else }}{{ $coauthor }}{{ end }}{{ end }}</p>
   {{ end }}
   {{ with $paper.status_detail }}
   <p class="meta">{{ . }}</p>
