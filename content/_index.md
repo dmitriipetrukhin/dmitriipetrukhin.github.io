@@ -25,7 +25,6 @@ awards:
 affiliations:
   - name: "SCORE III"
     url: "https://score3.econ.cam.ac.uk/"
-work_in_progress_note: "Other early-stage work includes a project with Massimo Morelli and Marco Gianni."
 ---
 
 I am a PhD student in Economics at the University of Cambridge. My research sits at the intersection of political economy, development economics, and the economics of religion, with a particular interest in conflict and populism.
