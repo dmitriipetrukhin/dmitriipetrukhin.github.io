@@ -10,7 +10,7 @@
       url: "https://cepr.org/publications/dp21638"
     - name: "Cambridge"
       url: "https://www.econ.cam.ac.uk/sites/default/files/publication-cwpe-pdfs/cwpe2644.pdf"
-  description: "Estimates the local economic costs of communal riots in India, using district-level data to study effects on nightlights, firms, credit, infrastructure, and institutional trust."
+  description: "Estimates the local economic costs of communal riots in India, using district-level data to study effects on nightlights, firms, credit, and infrastructure."
   tags:
     - "conflict"
     - "religion"
