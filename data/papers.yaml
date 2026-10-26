@@ -47,26 +47,14 @@
     - "political economy"
   job_market_paper: false
 
-- title: "Populist Laws and Economic Performance: Evidence from Spanish Regions"
-  coauthors:
-    - "Guillem Gordo-i-Bach"
-  status: "work in progress"
-  status_detail: "Currently under substantial revision"
-  tags:
-    - "text analysis"
-    - "machine learning"
-    - "political economy"
-  job_market_paper: false
-
-- title: "China–India Revisited"
+- title: "Piety, Popes, Polls, Politics"
   coauthors:
     - "Sriya Iyer"
-    - "Wei Xiong"
-    - "Xu Yang"
   status: "work in progress"
+  description: "Studies whether religious authority confers political legitimacy, finding that papal visits increase approval of host-country leaders with no detectable increase in religiosity."
   tags:
+    - "religion"
     - "political economy"
-    - "development"
   job_market_paper: false
 
 - title: "The Voice of Politics"
@@ -86,4 +74,15 @@
   tags:
     - "populism"
     - "political economy"
+  job_market_paper: false
+
+- title: "China–India Revisited"
+  coauthors:
+    - "Sriya Iyer"
+    - "Wei Xiong"
+    - "Xu Yang"
+  status: "work in progress"
+  tags:
+    - "political economy"
+    - "development"
   job_market_paper: false
